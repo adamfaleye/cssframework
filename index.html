@@ -1,14 +1,72 @@
+<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Heading</h1>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Assistant - Ireland</title>
+  <!-- Include the CSS framework stylesheet here -->
+  <link rel="stylesheet" href="css/framework.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #007BFF;
+    }
+    .assistant-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    button {
+      padding: 10px;
+      background-color: #28A745;
+      color: #FFF;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="assistant-container">
+    <h1>Welcome to Our School Assistant!</h1>
+    <p>This automated assistant is here to help you with information about our school in Ireland.</p>
+
+    <h2>Services:</h2>
+    <ul>
+      <li>Get information about school events.</li>
+      <li>Check the latest news and updates.</li>
+      <li>Ask for contact details and directions.</li>
+      <!-- Add more services as needed -->
+    </ul>
+
+    <h2>Contact Us:</h2>
+    <p>If you have any questions or need assistance, feel free to contact us.</p>
+    <button onclick="showContactForm()">Contact Form</button>
+
+    <div id="contactForm" style="display: none;">
+      <h3>Contact Form</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showContactForm() {
+      var contactForm = document.getElementById('contactForm');
+      contactForm.style.display = 'block';
+    }
+  </script>
+</body>
 </html>
